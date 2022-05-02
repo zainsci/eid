@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && next export && touch out/.nojekyll && gh-pages -d out -r git@github.com:zainsci/eid.git -t true"
   },
   "dependencies": {
     "framer-motion": "^6.3.1",

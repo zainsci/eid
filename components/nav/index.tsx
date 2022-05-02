@@ -11,7 +11,11 @@ const Nav = () => {
   const navItems = [
     { text: "Home", href: "/", anchor: false },
     { text: "Portfolio", href: "https://zainsci.dev", anchor: true },
-    { text: "Older Projects", href: "/old", anchor: false },
+    {
+      text: "Older Projects",
+      href: "https://zainsci.dev/projects",
+      anchor: true,
+    },
   ]
 
   return (

@@ -12,13 +12,3 @@ const Old: NextPage = () => {
 }
 
 export default Old
-
-export async function getServerSideProps() {
-  return {
-    redirect: {
-      permanent: false,
-      destination: "/",
-    },
-    props: {},
-  }
-}
