@@ -13,7 +13,7 @@ import Layout from "components/layout"
 
 const Eid = () => {
 	return (
-		<Layout title="Eid Mubarak - 2023">
+		<Layout title="Eid Mubarak - 1444/2023">
 			<div className="w-screen h-screen flex flex-col justify-center items-center bg-gray-200">
 				<div className="w-[30rem] h-[30rem] relative bg-gradient-to-tr from-slate-100 to-slate-200 flex flex-col justify-center items-center overflow-hidden text-gray-300 shadow-2xl shadow-teal-700 dark:from-slate-900 dark:to-slate-800">
 					<h1 className="absolute text-blue-900 dark:text-blue-500 flex z-30 bottom-16 right-14">
