@@ -8,7 +8,7 @@ import StarIcon from "components/svgs/2022/star.svg"
 import MoonIcon from "components/svgs/2022/moon.svg"
 import StarShape01 from "components/svgs/2022/star01.svg"
 import StarShape02 from "components/svgs/2022/star02.svg"
-import MadeBy from "components/svgs/2022/made-by.svg"
+import MadeBy from "components/svgs/made-by.svg"
 
 export default function Eid2022() {
 	return (

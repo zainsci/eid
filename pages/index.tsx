@@ -6,6 +6,7 @@ import Lamp02Svg from "components/svgs/2023/lamp02.svg"
 import StarSvg from "components/svgs/2023/star.svg"
 import CrescentSvg from "components/svgs/2023/crescent.svg"
 import EidUlFitrMubarak from "components/svgs/2023/eid-ul-fitr-mubarak.svg"
+import MadeBy from "components/svgs/made-by.svg"
 
 import Star01Svg from "components/svgs/2022/star01.svg"
 import Layout from "components/layout"
@@ -24,6 +25,12 @@ const Eid = () => {
 					<Star />
 					<Star01 />
 					<ThemeToggle />
+					<a
+						href="https://zainsci.dev"
+						className="absolute bottom-4 text-slate-500"
+					>
+						<MadeBy />
+					</a>
 				</div>
 			</div>
 		</Layout>
