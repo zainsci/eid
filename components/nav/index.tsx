@@ -8,6 +8,7 @@ import Close from "components/svgs/close.svg"
 import HomeSvg from "components/svgs/home.svg"
 import UserSvg from "components/svgs/user.svg"
 import FolderSvg from "components/svgs/folder.svg"
+import ArchiveSvg from "components/svgs/archive.svg"
 
 const Nav = () => {
 	const [showNav, setShowNav] = useCycle(false, true)
@@ -25,6 +26,12 @@ const Nav = () => {
 			href: "https://projects.zainsci.dev/",
 			anchor: true,
 			icon: <FolderSvg />,
+		},
+		{
+			text: "Archive",
+			href: "/archive",
+			anchor: false,
+			icon: <ArchiveSvg />,
 		},
 	]
 
