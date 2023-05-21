@@ -4,11 +4,11 @@ import { NextPage } from "next"
 import Layout from "components/layout"
 
 const Old: NextPage = () => {
-  return (
-    <Layout title="Old Projects - zainsci.dev">
-      <div className="text-white">Older Projects</div>
-    </Layout>
-  )
+	return (
+		<Layout title="Old Eid Projects - zainsci.dev">
+			<div className="text-white">Here Comes Old Eid Projects</div>
+		</Layout>
+	)
 }
 
 export default Old

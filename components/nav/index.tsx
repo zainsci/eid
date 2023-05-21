@@ -2,65 +2,53 @@ import React from "react"
 import { motion, useCycle } from "framer-motion"
 
 import NavItem from "components/nav/nav-item"
-import Menu from "components/svgs/2022/menu.svg"
-import Close from "components/svgs/2022/close.svg"
+import Menu from "components/svgs/menu.svg"
+import Close from "components/svgs/close.svg"
+
+import HomeSvg from "components/svgs/home.svg"
+import UserSvg from "components/svgs/user.svg"
+import FolderSvg from "components/svgs/folder.svg"
 
 const Nav = () => {
 	const [showNav, setShowNav] = useCycle(false, true)
 
 	const navItems = [
-		{ text: "Home", href: "/", anchor: false },
-		{ text: "Portfolio", href: "https://zainsci.dev", anchor: true },
+		{ text: "Home", href: "/", anchor: false, icon: <HomeSvg /> },
+		{
+			text: "Portfolio",
+			href: "https://zainsci.dev",
+			anchor: true,
+			icon: <UserSvg />,
+		},
 		{
 			text: "Older Projects",
-			href: "https://zainsci.dev/projects",
+			href: "https://projects.zainsci.dev/",
 			anchor: true,
+			icon: <FolderSvg />,
 		},
 	]
 
 	return (
-		<>
-			<motion.div
-				whileHover={{
-					rotateZ: "90deg",
-				}}
-				className={`absolute w-8 h-8 md:w-12 md:h-12 top-10 right-10 md:top-10 md:right-10 z-50 flex justify-center items-center rounded-full cursor-pointer ${
-					showNav ? "hover:bg-white hover:text-amber-700" : "text-white"
-				}`}
+		<nav className="absolute top-8 right-8 flex justify-center items-center p-4">
+			<button
+				className={`w-10 h-10 p-1 text-white bg-gray-400 rounded-full flex justify-center items-center cursor-pointer z-50 opacity-70`}
 				onClick={() => setShowNav()}
 			>
 				{showNav ? <Close /> : <Menu />}
-			</motion.div>
+			</button>
 
-			<motion.nav
-				variants={{
-					initial: {
-						x: "100%",
-					},
-					open: {
-						x: 0,
-					},
-					closed: {
-						x: "100%",
-					},
+			<motion.ul
+				className={`absolute top-16 z-50 space-y-2 px-4`}
+				animate={{
+					scaleY: showNav ? "100%" : 0,
+					transformOrigin: "top",
 				}}
-				animate={showNav ? "open" : "closed"}
-				initial="initial"
-				transition={{
-					type: "spring",
-					stiffness: 400,
-					damping: 40,
-					duration: 0.5,
-				}}
-				className="w-screen h-screen absolute top-0 left-0 bottom-0 right-0 bg-purple-500 text-white z-40"
 			>
-				<ul className="flex flex-col h-full w-full justify-center items-center text-center font-display">
-					{navItems.map((item, i) => (
-						<NavItem {...item} key={i} />
-					))}
-				</ul>
-			</motion.nav>
-		</>
+				{navItems.map((item) => (
+					<NavItem {...item} key={item.href} />
+				))}
+			</motion.ul>
+		</nav>
 	)
 }
 
