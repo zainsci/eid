@@ -17,6 +17,9 @@ module.exports = {
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 			},
+			animation: {
+				"spin-slow": "spin 40s linear infinite",
+			},
 		},
 		fontFamily: {
 			display: ["'Lilita One'", "cursive"],

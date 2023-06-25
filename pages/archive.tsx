@@ -1,5 +1,6 @@
 import React from "react"
 import { NextPage } from "next"
+import { motion } from "framer-motion"
 
 import Layout from "components/layout"
 import Link from "next/link"
@@ -45,7 +46,7 @@ const Old: NextPage = () => {
 									<a className="text-white px-4 py-6 rounded-2xl flex flex-col drop-shadow-md">
 										{item.title}
 										<div
-											className={`absolute ${item.iconColor} z-50 w-40 h-40 -top-1/2 right-0`}
+											className={`absolute ${item.iconColor} z-50 w-40 h-40 -top-1/2 right-0 animate-spin-slow`}
 										>
 											{item.icon}
 										</div>
